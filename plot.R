@@ -7,6 +7,7 @@ lymf %>%
   ggplot(aes(I(diffdage/365), loglymf, group = ProjectID)) +
   geom_line(alpha = 1/5) + theme_minimal() + xlab("") + ylab("") + ylim(c(-1.5,3)) + 
   geom_line(data = patient,aes(I(diffdage/365), loglymf), colour = "yellow", alpha = 3/3)
+dev.off()
 
 png('artis-black.png',width = 1200, height = 800,pointsize = 30)
 lymf %>% ggplot(aes(I(diffdage/365), loglymf, group = ProjectID)) +
